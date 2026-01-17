@@ -219,6 +219,14 @@
         li.innerHTML = `<strong>${index + 1}.</strong> ${nama}`;
         container.appendChild(li);
     });
+    let credit = document.createElement('p');
+credit.style.textAlign = 'right';
+credit.style.fontSize = '12px';
+credit.style.fontStyle = 'italic';
+credit.style.marginTop = '20px';
+credit.innerHTML = 'Created by Satria Panindhita Sinisihan Wahyu';
+container.after(credit);
+
 </script>
 
 </body>
