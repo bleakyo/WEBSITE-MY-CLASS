@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kelas VII-E | Jungle Edition</title>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-green: #2d5a27;
+            --leaf-green: #8bc34a;
+            --jungle-dark: #0a1a0a;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            background: url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=2071&auto=format&fit=crop') no-repeat center center fixed;
+            background-size: cover;
+            color: #f0f0f0;
+        }
+
+        .overlay {
+            background: rgba(10, 26, 10, 0.88);
+            min-height: 100vh;
+            padding-bottom: 50px;
+        }
+
+        header {
+            background: rgba(0, 30, 0, 0.9);
+            padding: 40px 20px;
+            text-align: center;
+            border-bottom: 5px solid var(--leaf-green);
+        }
+
+        h1 {
+            font-family: 'Merriweather', serif;
+            color: var(--leaf-green);
+            font-size: 3rem;
+            margin: 0;
+            text-shadow: 3px 3px 5px rgba(0,0,0,0.8);
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 30px auto;
+            padding: 20px;
+            background: rgba(20, 40, 20, 0.85);
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            border: 1px solid rgba(139, 195, 74, 0.2);
+        }
+
+        /* Kotak Info KM & Wali Kelas */
+        .info-petinggi {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .card-petinggi {
+            background: rgba(139, 195, 74, 0.15);
+            padding: 15px 30px;
+            border-radius: 15px;
+            border: 1px solid var(--leaf-green);
+            min-width: 280px;
+            text-align: center;
+        }
+
+        .card-petinggi span {
+            display: block;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            color: var(--leaf-green);
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        .card-petinggi strong {
+            font-size: 1.1rem;
+            color: #fff;
+            display: block;
+            margin-top: 5px;
+        }
+
+        h2 {
+            font-family: 'Merriweather', serif;
+            color: #cddc39;
+            text-align: center;
+            background: rgba(0,0,0,0.4);
+            padding: 12px;
+            margin-top: 50px;
+            border-radius: 10px;
+        }
+
+        /* Tabel Pelajaran */
+        .table-res { overflow-x: auto; border-radius: 10px; margin-top: 20px; }
+        table { width: 100%; border-collapse: collapse; background: white; color: #333; }
+        th, td { border: 1px solid #ccc; padding: 12px; text-align: center; font-size: 0.85rem; }
+        th { background: var(--primary-green); color: white; text-transform: uppercase; }
+        .break { background: #e8f5e9; font-weight: bold; color: var(--primary-green); }
+
+        /* Kartu Piket */
+        .grid-piket { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 15px; margin-top: 20px; }
+        .card-piket {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(139, 195, 74, 0.4);
+            border-radius: 15px;
+            padding: 15px;
+            text-align: center;
+        }
+        .card-piket h3 { color: var(--leaf-green); margin-top: 0; font-size: 1.2rem; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 5px; }
+        .card-piket ul { list-style: none; padding: 0; margin-top: 10px; }
+        .card-piket li { font-size: 0.9rem; padding: 2px 0; color: #ddd; }
+
+        /* Daftar Siswa 2 Kolom */
+        .grid-siswa {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 10px;
+            padding: 0;
+            list-style: none;
+            margin-top: 20px;
+        }
+        .grid-siswa li {
+            background: rgba(255,255,255,0.07);
+            padding: 12px;
+            border-radius: 8px;
+            border-left: 5px solid var(--leaf-green);
+            font-size: 0.9rem;
+        }
+
+        footer { text-align: center; margin-top: 60px; color: #666; font-size: 0.8rem; padding: 20px; }
+    </style>
+</head>
+<body>
+
+<div class="overlay">
+    <header>
+        <h1>VII-E JUNGLE</h1>
+        <p>Website Resmi Kelas - SMP Digital</p>
+    </header>
+
+    <div class="container">
+        
+        <div class="info-petinggi">
+            <div class="card-petinggi">
+                <span>Wali Kelas</span>
+                <strong>Rita Monita Fitriani, S.Pd.</strong>
+            </div>
+            <div class="card-petinggi">
+                <span>Ketua Murid (KM)</span>
+                <strong>Satria Panindhita S.W</strong>
+            </div>
+        </div>
+
+        <h2>📅 Jadwal Pelajaran</h2>
+        <div class="table-res">
+            <table>
+                <tr>
+                
+            <tr><td>06.30-07.30</td><td>UPACARA</td><td>CINTA TANAH AIR</td><td>RABU TAKWA</td><td>LITERASI</td><td>BERSEBA</td></tr>
+        <tr><td>07.30-08.10</td><td>Informatika</td><td>IPS</td><td>Matematika</td><td>B. Indonesia</td><td>IPS</td></tr>
+        <tr><td>08.10-08.50</td><td>Informatika</td><td>IPS</td><td>Matematika</td><td>B. Indonesia</td><td>IPS</td></tr>
+        <tr><td>08.50-09.30</td><td>Informatika</td><td>Matematika</td><td>Matematika</td><td>B. Indonesia</td><td>B. Inggris</td></tr>
+        <tr class="break"><td colspan="6">09.30 - 10.00 | ISTIRAHAT</td></tr>
+        <tr><td>10.00-10.40</td><td>IPA</td><td>Matematika</td><td>PJOK</td><td>Seni Budaya</td><td>B. Inggris</td></tr>
+        <tr><td>10.40-11.20</td><td>IPA</td><td>B. Inggris</td><td>PJOK</td><td>Seni Budaya</td><td>Bahasa Sunda</td></tr>
+        <tr><td>11.20-12.00</td><td>B. Indonesia</td><td>B. Inggris</td><td>PJOK</td><td>Seni Budaya</td><td>Bahasa Sunda</td></tr>
+        <tr class="break"><td colspan="6">12.00 - 12.40 | SALAT DZUHUR / IBADAH BERJAMAAH</td></tr>
+        <tr><td>12.40-13.20</td><td>B. Indonesia</td><td>IPA</td><td>P. Pancasila</td><td>PAI</td><td rowspan="3">EKSTRAKURIKULER</td></tr>
+        <tr><td>13.20-14.00</td><td>B. Indonesia</td><td>IPA</td><td>P. Pancasila</td><td>PAI</td></tr>
+        <tr><td>14.00-17.00</td><td>EKSTRAKURIKULER</td><td>IPA / EKSKUL</td><td>P. Pancasila / EKSKUL</td><td>PAI / EKSKUL</td></tr>
+            </table>
+        </div>
+
+        <h2>🧹 Jadwal Piket</h2>
+        <div class="grid-piket">
+            <div class="card-piket"><h3>Senin</h3><ul><li>Irisha</li><li>Shella</li><li>Shavie</li><li>Aulia</li><li>Adrian</li><li>Faiz</li><li>Fadhil</li><li>Bima</li></ul></div>
+            <div class="card-piket"><h3>Selasa</h3><ul><li>Atiqah</li><li>Safa</li><li>Faiqah</li><li>Naima</li><li>Rajendra</li><li>Alzikri</li><li>Rizky</li><li>Pavel</li></ul></div>
+            <div class="card-piket"><h3>Rabu</h3><ul><li>Atahillah</li><li>Nugraha</li><li>Irsyad</li><li>Rellia</li><li>Maulidya</li><li>Geoffrey</li><li>Arti</li><li>Raeisa</li></ul></div>
+            <div class="card-piket"><h3>Kamis</h3><ul><li>Kinanti</li><li>Amora</li><li>Raina</li><li>Yunneke</li><li>Egy</li><li>Satria</li><li>Lutfi</li><li>Keanu</li></ul></div>
+            <div class="card-piket"><h3>Jum'at</h3><ul><li>Benedicta</li><li>Alda</li><li>Syifa</li><li>Kesya</li><li>Alif</li><li>Verdi</li><li>Davina</li><li>Humaira</li></ul></div>
+        </div>
+
+        <h2>🐾 Daftar Anggota Rimba (40 Siswa)</h2>
+        <ul class="grid-siswa" id="list-siswa"></ul>
+    </div>
+
+    <footer>
+        &copy; 2026 Website Kelas VII-E | Dibuat dengan Kode & Semangat
+    </footer>
+</div>
+
+<script>
+    const siswaData = [
+        "ADRIAN DWI MULYADI", "ALDA DELVIA", "ALZIQRI FATHIIN SYAHDIANA", "AMORA BUNGA SABRINA", "ARTI PRASASTI",
+        "ATAHILLAH DHUHA FAIDH ATHORIQ", "ATIQAH PUTRI RAHMADANI", "AULIA FEBRIYANTI", "BENEDICTA ANNABELLE NATANAILA", "BIMA FAHMI GUNAWAN",
+        "DAVINA SALSABILA ANGGANA", "EGY EVAN JAMAL", "FAIQAH RAHMANDITA", "FAIZ DWI SOFIAN", "GEOFFREY KISAYBERMA",
+        "HUMAIRA DZAKIYYA SAKIRA SAKHI", "IRISHA NAURA KIREINA", "IRSYAD IDZULHAQ", "KESYA ATHALIA", "KHEANU FACHRUROZI SATRIA FIRDAUS",
+        "KINANTI SEKAR ARUM", "MAULIDYA GHITA ALILMI", "MUHAMAD ALIF RIZKY", "MUHAMMAD FADHIL AKBAR", "MUHAMMAD LUTHFY SYA'BANI",
+        "NAIMA KIRANA PUTRI", "NUGRAHA ADITYA KARYA HARIYAWAN", "NURSHELLA ARUM KINANTI", "PAVEL ADNI GANA MAULA", "RAEISA ARRA JANETTA ADNAN",
+        "RAINA VALERIE YASMIN", "RAJENDRA RAFFA UTOMO", "RELLIA ZANETTA ADSYLA", "RISKY APRILYANTO HERMAWAN", "SAFA PUTRI HANAFIANTY",
+        "SATRIA PANINDHITA SINISIHAN WAHYU", "SHAVIE DARA ANASTASYA", "SYIFA MEISYA AZZAHRA", "VERDI ANSYAH RAHMADAN", "YUNEKKE RACHMA NISSA"
+    ];
+
+    const container = document.getElementById('list-siswa');
+    siswaData.forEach((nama, index) => {
+        let li = document.createElement('li');
+        li.innerHTML = `<strong>${index + 1}.</strong> ${nama}`;
+        container.appendChild(li);
+    });
+</script>
+
+</body>
+</html>
